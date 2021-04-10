@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "839537592811",
+    "project_id": "spark2021-929af",
+    "storage_bucket": "spark2021-929af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839537592811:android:0249e9e35535ecafbdb1ae",
+        "android_client_info": {
+          "package_name": "bk.spark2021app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839537592811-274nplk72ssebr55hp20mdp7t5flin1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1OK8_oSaGG6_oAIwu5VRezwNecRs0_7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839537592811-274nplk72ssebr55hp20mdp7t5flin1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
