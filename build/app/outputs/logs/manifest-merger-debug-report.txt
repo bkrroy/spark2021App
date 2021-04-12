@@ -110,7 +110,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HP
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\3e26ef26d15f163a2f1a31a2130a0254\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from E:\Spark App\spark2021App\android\app\src\main\AndroidManifest.xml:10:9-37
+		ADDED from E:\Spark App\spark2021App\android\app\src\main\AndroidManifest.xml:10:9-30
 	android:icon
 		ADDED from E:\Spark App\spark2021App\android\app\src\main\AndroidManifest.xml:11:9-43
 	android:name

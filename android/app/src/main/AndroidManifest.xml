@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="spark2021app"
+        android:label="Spark'21"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -1,0 +1,4 @@
+#Sat Apr 10 21:54:59 IST 2021
+base.0=E\:\\Spark App\\spark2021App\\build\\app\\intermediates\\transforms\\r8\\release\\0\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
