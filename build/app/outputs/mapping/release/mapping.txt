@@ -1,6 +1,6 @@
 # compiler: R8
 # compiler_version: 1.5.64
-# min_api: 16
+# min_api: 23
 # pg_map_id: 400c311
 androidx.activity.Cancellable -> androidx.activity.a:
 androidx.activity.ComponentActivity -> androidx.activity.ComponentActivity:

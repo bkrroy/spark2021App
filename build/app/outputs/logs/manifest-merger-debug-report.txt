@@ -8,6 +8,7 @@ MERGED from E:\Spark App\spark2021App\android\app\src\main\AndroidManifest.xml:1
 MERGED from [:firebase_auth] E:\Spark App\spark2021App\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
 MERGED from [:path_provider] E:\Spark App\spark2021App\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:firebase_core] E:\Spark App\spark2021App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\aa90dc9d7371403c787d39346667e8a8\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-analytics:18.0.2] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\b31f419ed1bddb3bebdea48541e2ff88\firebase-analytics-18.0.2\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\4789a55bcfd410bebf132e99b8a7a1ae\jetified-firebase-auth-20.0.3\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\c68c629f31f51748b9746c4ee8bfda39\play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
@@ -167,6 +168,8 @@ MERGED from [:path_provider] E:\Spark App\spark2021App\build\path_provider\inter
 MERGED from [:path_provider] E:\Spark App\spark2021App\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] E:\Spark App\spark2021App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] E:\Spark App\spark2021App\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\aa90dc9d7371403c787d39346667e8a8\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\aa90dc9d7371403c787d39346667e8a8\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.google.firebase:firebase-analytics:18.0.2] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\b31f419ed1bddb3bebdea48541e2ff88\firebase-analytics-18.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:18.0.2] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\b31f419ed1bddb3bebdea48541e2ff88\firebase-analytics-18.0.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\HP\.gradle\caches\transforms-2\files-2.1\4789a55bcfd410bebf132e99b8a7a1ae\jetified-firebase-auth-20.0.3\AndroidManifest.xml:21:5-44

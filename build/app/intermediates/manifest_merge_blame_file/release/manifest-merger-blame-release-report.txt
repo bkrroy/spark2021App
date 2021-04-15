@@ -1,11 +1,11 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="bk.spark2021app"
-4    android:versionCode="3"
+4    android:versionCode="4003"
 5    android:versionName="1.2.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
+8        android:minSdkVersion="23"
 8-->E:\Spark App\spark2021App\android\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
 9-->E:\Spark App\spark2021App\android\app\src\main\AndroidManifest.xml
