@@ -16,6 +16,8 @@ const kBackgroundColor = LinearGradient(
 const kButtonWhiteColor = Color(0xFFE5E5E5);
 
 const kLightBlueColor = Color(0xFF4BD0FB);
+const kTrackCardColor = Color(0xFFCCE5FB);
+const kTrackCardHeadingColor = Color(0xFF00203A);
 
 
 /*

@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
           behaviour: SnakeBarBehaviour.floating,
           padding: EdgeInsets.only(left: 10, right: 10, bottom: 15),
           snakeShape: SnakeShape.indicator,
-          showSelectedLabels: true,
+          showSelectedLabels: false,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
