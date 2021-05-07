@@ -18,12 +18,22 @@ const kButtonWhiteColor = Color(0xFFE5E5E5);
 const kLightBlueColor = Color(0xFF4BD0FB);
 const kTrackCardColor = Color(0xFFCCE5FB);
 const kTrackCardHeadingColor = Color(0xFF00203A);
+const kLogoutButtonColor = Color(0xFF2F7BC7);
 
 
-/*
-<gradient
-        android:angle="90"
-        android:startColor="#001B31"
-        android:centerColor="#012B4E"
-        android:endColor="#001B31"/>
- */
+Widget appBar(BuildContext context){
+ return AppBar(
+   backgroundColor: Color(0xFF001B31),
+   elevation: 0,
+   automaticallyImplyLeading: false,
+   title: GestureDetector(
+     onTap: () {
+       Navigator.pop(context);
+     },
+     child: Icon(
+       Icons.chevron_left_rounded,
+       size: 40,
+     ),
+   ),
+ );
+}

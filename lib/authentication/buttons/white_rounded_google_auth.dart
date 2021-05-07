@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:spark2021app/google_authentication.dart';
 
 /*
 The following widget contains two button
@@ -14,12 +16,6 @@ class GoogleOrAppleSignIn extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           OtherSignInWhiteContainer(imagePath: 'images/googleLogo.png'),
-          SizedBox(
-            width: 20,
-          ),
-          OtherSignInWhiteContainer(
-            imagePath: 'images/appleLogo.png',
-          ),
         ],
       ),
     );

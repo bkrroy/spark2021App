@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">839537592811-274nplk72ssebr55hp20mdp7t5flin1m.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">839537592811</string>
-    <string name="google_api_key" translatable="false">AIzaSyA1OK8_oSaGG6_oAIwu5VRezwNecRs0_7c</string>
-    <string name="google_app_id" translatable="false">1:839537592811:android:0249e9e35535ecafbdb1ae</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA1OK8_oSaGG6_oAIwu5VRezwNecRs0_7c</string>
-    <string name="google_storage_bucket" translatable="false">spark2021-929af.appspot.com</string>
-    <string name="project_id" translatable="false">spark2021-929af</string>
+    <string name="default_web_client_id" translatable="false">78408776543-rb758frot5m5k7cmv4g4kp21v257fru5.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">78408776543</string>
+    <string name="google_api_key" translatable="false">AIzaSyCVlryWo5dFc-gAes7i0JhknPFLR5XozSQ</string>
+    <string name="google_app_id" translatable="false">1:78408776543:android:fb9dc94a440ffa2d7ed4ea</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCVlryWo5dFc-gAes7i0JhknPFLR5XozSQ</string>
+    <string name="google_storage_bucket" translatable="false">spark2021app.appspot.com</string>
+    <string name="project_id" translatable="false">spark2021app</string>
 </resources>

@@ -27,72 +27,74 @@ class MeetTheTeamScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFF001B31),
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            Icons.chevron_left_rounded,
-            size: 40,
-          ),
-        ),
-      ),
-      body: Stack(
-        children: [
-          BackgroundGradientWidget(),
-          SingleChildScrollView(
-            child: Container(
-              width: screenWidth,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'Developers',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 40,
-                      color: kLightBlueColor,
-                    ),
-                  ),
-                  ProfileViewRowWidget(
-                    firsPersonProfilePhotoLink: imageLinkList[0],
-                    secondPeronProfilePhotoLink: imageLinkList[1],
-                    firstPersonName: personNameList[0],
-                    secondPersonName: personNameList[1],
-                    designation: 'Developer',
-                  ),
-                  ProfileViewRowWidget(
-                    firsPersonProfilePhotoLink: imageLinkList[2],
-                    secondPeronProfilePhotoLink: imageLinkList[3],
-                    firstPersonName: personNameList[2],
-                    secondPersonName: personNameList[3],
-                    designation: 'Designer',
-                  ),
-                  ProfileViewRowWidget(
-                    firsPersonProfilePhotoLink: imageLinkList[4],
-                    secondPeronProfilePhotoLink: imageLinkList[5],
-                    firstPersonName: personNameList[4],
-                    secondPersonName: personNameList[5],
-                    designation: 'Designer',
-                  ),
-                  InformationColumnWidget(
-                    networkImage: imageLinkList[6],
-                    personName: personNameList[6],
-                    designation: "Designer",
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                ],
-              ),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xFF001B31),
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          title: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.chevron_left_rounded,
+              size: 40,
             ),
           ),
-        ],
+        ),
+        body: Stack(
+          children: [
+            BackgroundGradientWidget(),
+            SingleChildScrollView(
+              child: Container(
+                width: screenWidth,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Developers',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 40,
+                        color: kLightBlueColor,
+                      ),
+                    ),
+                    ProfileViewRowWidget(
+                      firsPersonProfilePhotoLink: imageLinkList[0],
+                      secondPeronProfilePhotoLink: imageLinkList[1],
+                      firstPersonName: personNameList[0],
+                      secondPersonName: personNameList[1],
+                      designation: 'Developer',
+                    ),
+                    ProfileViewRowWidget(
+                      firsPersonProfilePhotoLink: imageLinkList[2],
+                      secondPeronProfilePhotoLink: imageLinkList[3],
+                      firstPersonName: personNameList[2],
+                      secondPersonName: personNameList[3],
+                      designation: 'Designer',
+                    ),
+                    ProfileViewRowWidget(
+                      firsPersonProfilePhotoLink: imageLinkList[4],
+                      secondPeronProfilePhotoLink: imageLinkList[5],
+                      firstPersonName: personNameList[4],
+                      secondPersonName: personNameList[5],
+                      designation: 'Designer',
+                    ),
+                    InformationColumnWidget(
+                      networkImage: imageLinkList[6],
+                      personName: personNameList[6],
+                      designation: "Designer",
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -114,23 +116,26 @@ class ProfileViewRowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 210,
-      width: 298,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          InformationColumnWidget(
-            networkImage: firsPersonProfilePhotoLink,
-            personName: firstPersonName,
-            designation: designation,
-          ),
-          InformationColumnWidget(
-            networkImage: secondPeronProfilePhotoLink,
-            personName: secondPersonName,
-            designation: designation,
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        height: 210,
+        width: 298,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            InformationColumnWidget(
+              networkImage: firsPersonProfilePhotoLink,
+              personName: firstPersonName,
+              designation: designation,
+            ),
+            InformationColumnWidget(
+              networkImage: secondPeronProfilePhotoLink,
+              personName: secondPersonName,
+              designation: designation,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -163,6 +168,7 @@ class InformationColumnWidget extends StatelessWidget {
           ),
           Text(
             personName,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'Poppins',
               color: kLightBlueColor,
@@ -171,6 +177,7 @@ class InformationColumnWidget extends StatelessWidget {
           ),
           Text(
             designation,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'Poppins',
               fontSize: 10.0,

@@ -23,7 +23,6 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
-
   @override
   void initState() {
     super.initState();
@@ -32,98 +31,103 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenWidth = MediaQuery.of(context).size.width;
     final firebaseUser = context.watch<User>();
 
-    if(firebaseUser != null){
+    if (firebaseUser != null) {
       return HomePage();
     }
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          child: Stack(
-            children: [
-              BackgroundGradientWidget(),
-              BackgroundDarkDots(),
-              TreeShapeWithDots(),
-              Container(
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    SparkLogoWidget(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.09,
-                    ),
-                    EmailIdWidget(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    PasswordWidget(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    Hero(
-                        tag: 'confirmPassword',
-                        child: Material(
-                            color: Colors.transparent,
-                            child: ConfirmPasswordWidget())),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    InkWell(
-                      onTap: (){
-                        String email = context.read<AuthenticationInformation>().returnEmail();
-                        String password = context.read<AuthenticationInformation>().returnPassword();
-                        context.read<AuthenticationService>().signUp(email: email, password: password);
-                      },
-                      child: Container(
-                        height: 45,
-                        width: 143,
-                        decoration: BoxDecoration(
-                          color: Color(0xFF2F7BC7).withOpacity(0.5),
-                          border: Border.all(
-                            width: 2,
-                            color: Colors.white,
-                          ),
-                          borderRadius: BorderRadius.circular(8.0),
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        height: screenHeight,
+        width: screenWidth,
+        child: Stack(
+          children: [
+            BackgroundGradientWidget(),
+            BackgroundDarkDots(),
+            TreeShapeWithDots(),
+            Container(
+              height: screenHeight,
+              width: screenWidth,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SparkLogoWidget(),
+                  SizedBox(
+                    height: screenHeight * 0.09,
+                  ),
+                  EmailIdWidget(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  PasswordWidget(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  Hero(
+                      tag: 'confirmPassword',
+                      child: Material(
+                          color: Colors.transparent,
+                          child: ConfirmPasswordWidget())),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      String email = context
+                          .read<AuthenticationInformation>()
+                          .returnEmail();
+                      String password = context
+                          .read<AuthenticationInformation>()
+                          .returnPassword();
+                      context
+                          .read<AuthenticationService>()
+                          .signUp(email: email, password: password);
+                    },
+                    child: Container(
+                      height: 45,
+                      width: 143,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF2F7BC7).withOpacity(0.5),
+                        border: Border.all(
+                          width: 2,
+                          color: Colors.white,
                         ),
-                        child: Center(
-                          child: Text(
-                            'Sign Up',
-                            style: TextStyle(
-                              fontSize: 18.0,
-                            ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(
+                            fontSize: 18.0,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.08,
-                    ),
-                    OrWidgetDisplay(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    GoogleOrAppleSignIn(),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    SignInOrSignOutScreenNavigator(screenName: 'sign in',),
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.08,
+                  ),
+                  OrWidgetDisplay(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  GoogleOrAppleSignIn(),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.03,
+                  ),
+                  SignInOrSignOutScreenNavigator(
+                    screenName: 'sign in',
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
-
-
-
-

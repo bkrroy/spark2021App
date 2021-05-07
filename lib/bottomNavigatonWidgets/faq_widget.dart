@@ -17,7 +17,7 @@ class FAQWidget extends StatelessWidget {
     "Do we need to have the entire idea completely working?"
   ];
   List<String> _descriptionTextList = [
-    "Yes, you can, but you will be provided teammates randomly.",
+    "No, you should be at least a member of 2 to participate in the hackathon.",
     "The entire hackathon will be 48 hours long and it is completely free of cost.",
     "Yes, there will be workshops conducted weeks prior to the hackathon. These workshops will have topics based on the tracks for the hackathon.",
     "A channel will be provided on the Discord server to help you get in touch with the mentors.",

@@ -8,62 +8,64 @@ class PrizesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
     final screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFF001B31),
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        title: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            Icons.chevron_left_rounded,
-            size: 40,
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xFF001B31),
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          title: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.chevron_left_rounded,
+              size: 40,
+            ),
           ),
         ),
-      ),
-      body: Container(
-        height: screenHeight,
-        width: screenWidth,
-        child: Stack(
-          children: [
-            BackgroundGradientWidget(),
-            Container(
-              width: screenWidth,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'Prizes',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      fontSize: 40,
-                      color: kLightBlueColor,
+        body: Container(
+          height: screenHeight,
+          width: screenWidth,
+          child: Stack(
+            children: [
+              BackgroundGradientWidget(),
+              Container(
+                width: screenWidth,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Prizes',
+                      style: TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 40,
+                        color: kLightBlueColor,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: screenHeight * 0.1,
-                  ),
-                  PrizeRowWidget(
-                    prizeImagePath: 'images/firstPrize.png',
-                  ),
-                  SizedBox(
-                    height: screenHeight * 0.05,
-                  ),
-                  PrizeRowWidget(
-                    prizeImagePath: 'images/secondPrize.png',
-                  ),
-                  SizedBox(
-                    height: screenHeight * 0.05,
-                  ),
-                  PrizeRowWidget(
-                    prizeImagePath: 'images/thirdPrize.png',
-                  ),
-                ],
+                    SizedBox(
+                      height: screenHeight * 0.1,
+                    ),
+                    PrizeRowWidget(
+                      prizeImagePath: 'images/firstPrize.png',
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.05,
+                    ),
+                    PrizeRowWidget(
+                      prizeImagePath: 'images/secondPrize.png',
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.05,
+                    ),
+                    PrizeRowWidget(
+                      prizeImagePath: 'images/thirdPrize.png',
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

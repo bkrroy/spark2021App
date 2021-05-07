@@ -109,6 +109,7 @@ class DomainsWidget extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20,),
           ],
         ),
       ),
@@ -182,15 +183,6 @@ class TrackFlipCard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                Container(
-                  height: 42,
-                  width: 154,
-                  child: Text(
-                    headingText,
-                    textAlign: TextAlign.center,
-                    style: headingTextStyle,
-                  ),
-                ),
                 Expanded(
                   child: Text(
                     descriptionText,

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +6,9 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:spark2021app/authentication_information.dart';
 import 'package:spark2021app/authentication_service.dart';
+import 'package:spark2021app/fetching_service.dart';
+import 'package:spark2021app/google_authentication.dart';
+import 'package:spark2021app/screens/about_isa_vit.dart';
 import 'package:spark2021app/screens/signin.dart';
 import 'package:spark2021app/screens/signup.dart';
 import 'screens/prizes_screen.dart';
@@ -39,6 +43,12 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<AuthenticationInformation>(
           create: (_) => AuthenticationInformation(),
         ),
+        ChangeNotifierProvider<GoogleSignInProvider>(
+          create: (_) => GoogleSignInProvider(),
+        ),
+        ChangeNotifierProvider<FetchingService>(
+          create: (_) => FetchingService(FirebaseFirestore.instance),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -48,9 +58,10 @@ class MyApp extends StatelessWidget {
           '/signUp': (context) => SignUp(),
           '/signIn': (context) => SignIn(),
           '/prizes': (context) => PrizesScreen(),
-          '/profileScreen' : (context) => UserProfileScreen(),
-          '/meetTheTeamScreen' : (context) => MeetTheTeamScreen(),
-          '/announcementScreen' : (context) => AnnouncementScreen(),
+          '/profileScreen': (context) => UserProfileScreen(),
+          '/meetTheTeamScreen': (context) => MeetTheTeamScreen(),
+          '/announcementScreen': (context) => AnnouncementScreen(),
+          '/aboutISA-VIT': (context) => AboutISAVITPage(),
         },
         title: 'Spark2021',
         theme: ThemeData.dark(),

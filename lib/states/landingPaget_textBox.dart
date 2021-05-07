@@ -9,13 +9,13 @@ class LandingPageTextBox extends StatelessWidget {
       height: 135,
       width: 200,
       child: Text(
-        'Welcome participant,\nto the plug for '
+        'Welcome participant, to the plug for '
             'all things spark. Here,'
             'you will receive all the '
-            'updates for upcoming events \nin spark\'21',
+            'updates for upcoming events in spark\'21',
         textAlign: TextAlign.right,
         style: TextStyle(
-            fontSize: 15,
+            fontSize: 12,
             fontFamily: 'Poppins'
         ),
       ),
