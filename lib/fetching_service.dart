@@ -67,4 +67,9 @@ class FetchingService extends ChangeNotifier {
 
     return prizesList;
   }
+
+  Future<String> getAnnouncements() async {
+    final collection = await _firebaseFirestore.collection('Announcement').doc('docs').get();
+    return collection.data()['announcement'];
+  }
 }
