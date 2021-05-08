@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:spark2021app/authentication_service.dart';
 import 'package:spark2021app/constant.dart';
+import 'package:spark2021app/google_authentication.dart';
 import 'package:spark2021app/states/background_widget.dart';
 import 'package:spark2021app/states/glass_display_widget.dart';
 
@@ -97,6 +98,7 @@ class UserProfileScreen extends StatelessWidget {
                               ),
                               InkWell(
                                 onTap: () {
+                                  context.read<GoogleSignInProvider>().logout();
                                   context
                                       .read<AuthenticationService>()
                                       .signOut()
@@ -182,12 +184,3 @@ class InformationTextWidget extends StatelessWidget {
     );
   }
 }
-//
-// FlatButton(
-// child: Text('SignOut'),
-// onPressed: (){
-// context.read<AuthenticationService>().signOut().then((value) {
-// Navigator.pushNamed(context, '/signIn');
-// });
-// },
-// )
