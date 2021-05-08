@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:spark2021app/constant.dart';
@@ -8,6 +9,48 @@ class TimeLineWidget extends StatelessWidget {
     fontWeight: FontWeight.w600,
     color: kLightBlueColor,
   );
+
+  final List<String> dayOneTimeList = [
+    '10:30 am',
+    '1:00 pm',
+    '4:00 pm',
+    '9:00 pm',
+    '7:00 pm',
+    '11:30 pm',
+  ];
+
+  final List<String> firstDayInfo = [
+    'Inaugural Ceremony',
+    'Hack Begins',
+    'Technical Session 1',
+    'Review 1',
+    'Technical Session 2',
+    'Recreational Activities',
+  ];
+
+  final List<String> secondDayTimeList = [
+    '11:00 am',
+    '1:00 pm',
+    '3:30 pm',
+    '7:00 pm',
+  ];
+
+  final List<String> secondDayInfo = [
+    'Technical Session 3',
+    'Review 2',
+    'Recreational Activities',
+    'Technical Session 4',
+  ];
+
+  final List<String> thirdDayTimeList = [
+    '1:00 pm',
+    '6:00 pm',
+  ];
+
+  final List<String> thirdDayInfo = [
+    'Final Submission',
+    'Closing Ceremony',
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +68,7 @@ class TimeLineWidget extends StatelessWidget {
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               height: screenHeight * 0.75,
-              width: screenWidth * 0.8,
+              width: screenWidth * 0.99,
               decoration: BoxDecoration(
                 border: Border.all(color: kLightBlueColor, width: 3),
                 borderRadius: BorderRadius.circular(8.0),
@@ -39,17 +82,26 @@ class TimeLineWidget extends StatelessWidget {
                         'Day 1',
                         style: dayTextStyle,
                       ),
-                      TimeLineContainer(),
+                      TimeLineContainer(
+                        dayList: dayOneTimeList,
+                        dayInfoList: firstDayInfo,
+                      ),
                       Text(
                         'Day 2',
                         style: dayTextStyle,
                       ),
-                      TimeLineContainer(),
+                      TimeLineContainer(
+                        dayList: secondDayTimeList,
+                        dayInfoList: secondDayInfo,
+                      ),
                       Text(
                         'Day 3',
                         style: dayTextStyle,
                       ),
-                      TimeLineContainer(),
+                      TimeLineContainer(
+                        dayList: thirdDayTimeList,
+                        dayInfoList: thirdDayInfo,
+                      ),
                     ],
                   ),
                 ],
@@ -63,66 +115,93 @@ class TimeLineWidget extends StatelessWidget {
 }
 
 class TimeLineContainer extends StatelessWidget {
+  TimeLineContainer({@required this.dayList, @required this.dayInfoList});
+
+  final List<String> dayList;
+  final List<String> dayInfoList;
+
   @override
   Widget build(BuildContext context) {
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     return Container(
       width: screenWidth * 0.78,
-      child: Column(
-        children: [
-          TimeLineInformation(leadingDots: true,),
-          TimeLineInformation(leadingDots: true,),
-          TimeLineInformation(leadingDots: true,),
-          TimeLineInformation(leadingDots: false,),
-        ],
+      height: dayList.length * 85.0,
+      child: ListView.builder(
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: dayList.length,
+        itemBuilder: (context, index) {
+          return TimeLineInformation(
+            leadingDots: index < (dayList.length - 1) ? true : false,
+            time: dayList[index],
+            info: dayInfoList[index],
+          );
+        },
       ),
     );
   }
 }
 
 class TimeLineInformation extends StatelessWidget {
-
-  TimeLineInformation({@required this.leadingDots, this.firstDotVisible});
+  TimeLineInformation(
+      {@required this.leadingDots,
+      this.firstDotVisible,
+      @required this.time,
+      @required this.info});
 
   final bool leadingDots;
   final bool firstDotVisible;
+  final String time;
+  final String info;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        SizedBox(
-          height: 10,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('8:00 am'),
-            SizedBox(width: 20,),
-            DotTimeLineWidget(),
-            Padding(
-              padding: const EdgeInsets.only(left: 10.0),
-              child: Text('Comment'),
-            )
-          ],
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        leadingDots ? Container(
-          height: 35,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.78,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              LeadingDots(),
-              LeadingDots(),
-              LeadingDots(),
+              Container(
+                width: 60,
+                child: Text(time),
+              ),
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                      height: 65,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          DotTimeLineWidget(),
+                          leadingDots ? LeadingDots() : Container(),
+                          leadingDots ? LeadingDots() : Container(),
+                          leadingDots ? LeadingDots() : Container(),
+                        ],
+                      ),
+                    ),
+              SizedBox(
+                width: 10,
+              ),
+              Container(
+                height: 20,
+                child: AutoSizeText(info, maxLines: 1, style: GoogleFonts.poppins(fontSize: 6),),
+              ),
             ],
           ),
-        ) : Container(),
-      ],
+          SizedBox(
+            height: 10,
+          ),
+        ],
+      ),
     );
   }
 }

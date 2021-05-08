@@ -9,6 +9,9 @@ class FetchingService extends ChangeNotifier {
 
   final String speakers = 'Speakers';
   final String sponsors = 'Sponsors';
+  final String prizes = 'Prizes';
+
+  List<String> prizesList = [];
   List<List<String>> speakerList = [];
   List<String> sponsorsList = [];
 
@@ -48,5 +51,20 @@ class FetchingService extends ChangeNotifier {
     });
 
     return sponsorsList;
+  }
+
+  Future<List<String>> getPrizesList() async {
+    prizesList = [];
+
+    final collection = await _firebaseFirestore.collection(prizes).get();
+    final List<DocumentSnapshot> documents = collection.docs;
+
+    documents.forEach((element) {
+      prizesList.add(element.data()['first']);
+      prizesList.add(element.data()['second']);
+      prizesList.add(element.data()['third']);
+    });
+
+    return prizesList;
   }
 }

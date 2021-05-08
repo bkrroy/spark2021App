@@ -2,8 +2,30 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spark2021app/constant.dart';
 import 'package:spark2021app/states/background_widget.dart';
+import 'package:provider/provider.dart';
+import 'package:spark2021app/fetching_service.dart';
 
-class PrizesScreen extends StatelessWidget {
+class PrizesScreen extends StatefulWidget {
+  @override
+  _PrizesScreenState createState() => _PrizesScreenState();
+}
+
+class _PrizesScreenState extends State<PrizesScreen> {
+  List<String> prizesList = ['TBD', 'TBD', 'TBD'];
+
+  Future<void> getPrizesList() async {
+    final list = await context.read<FetchingService>().getPrizesList();
+    setState(() {
+      prizesList = list;
+    });
+  }
+
+  @override
+  void initState() {
+    getPrizesList();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -48,18 +70,21 @@ class PrizesScreen extends StatelessWidget {
                     ),
                     PrizeRowWidget(
                       prizeImagePath: 'images/firstPrize.png',
+                      prizeMoney: prizesList[0],
                     ),
                     SizedBox(
                       height: screenHeight * 0.05,
                     ),
                     PrizeRowWidget(
                       prizeImagePath: 'images/secondPrize.png',
+                      prizeMoney: prizesList[1],
                     ),
                     SizedBox(
                       height: screenHeight * 0.05,
                     ),
                     PrizeRowWidget(
                       prizeImagePath: 'images/thirdPrize.png',
+                      prizeMoney: prizesList[2],
                     ),
                   ],
                 ),
@@ -73,9 +98,10 @@ class PrizesScreen extends StatelessWidget {
 }
 
 class PrizeRowWidget extends StatelessWidget {
-  PrizeRowWidget({this.prizeImagePath});
+  PrizeRowWidget({this.prizeImagePath, this.prizeMoney});
 
   final String prizeImagePath;
+  final String prizeMoney;
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +129,7 @@ class PrizeRowWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12)),
             child: Center(
               child: Text(
-                'TBD',
+                prizeMoney,
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   color: Colors.black,

@@ -17,11 +17,11 @@ class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
 
   List<Widget> _widgetOptions = <Widget>[
-    HomeWidget(),
     TimeLineWidget(),
     DomainsWidget(),
     CollaborationWidget(),
     FAQWidget(),
+    HomeWidget(),
   ];
 
   void _onItemTapped(int index) {
@@ -48,14 +48,6 @@ class _HomePageState extends State<HomePage> {
             borderRadius: BorderRadius.all(Radius.circular(8)),
           ),
           items: [
-            BottomNavigationBarItem(
-              icon: ImageIcon(
-                AssetImage(
-                  'images/homeIcon.png',
-                ),
-              ),
-              label: 'Home',
-            ),
             BottomNavigationBarItem(
               icon: ImageIcon(
                 AssetImage(
@@ -87,6 +79,14 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               label: 'FAQ',
+            ),
+            BottomNavigationBarItem(
+              icon: ImageIcon(
+                AssetImage(
+                  'images/profileIcon.png',
+                ),
+              ),
+              label: 'Home',
             ),
           ],
           currentIndex: _selectedIndex,
