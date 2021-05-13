@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "78408776543",
+    "project_id": "spark2021app",
+    "storage_bucket": "spark2021app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78408776543:android:fb9dc94a440ffa2d7ed4ea",
+        "android_client_info": {
+          "package_name": "bk.spark2021app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78408776543-dmqkmk5lfqehblookttad25lg6v5hhjf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bk.spark2021app",
+            "certificate_hash": "eaa44127c3d09d2538abf00b0fe52174a22af627"
+          }
+        },
+        {
+          "client_id": "78408776543-mlulj5dmjbrvp80h5diimm1ddsgg5v29.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bk.spark2021app",
+            "certificate_hash": "55b8d248b2b5b5dbffe908f2641bec32f1829332"
+          }
+        },
+        {
+          "client_id": "78408776543-u2oegpmnituu0u34skh87977rgqg2pqb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bk.spark2021app",
+            "certificate_hash": "9127bd95357bd9fe471cdcfe7672fdaa42dae906"
+          }
+        },
+        {
+          "client_id": "78408776543-rb758frot5m5k7cmv4g4kp21v257fru5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVlryWo5dFc-gAes7i0JhknPFLR5XozSQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78408776543-rb758frot5m5k7cmv4g4kp21v257fru5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
