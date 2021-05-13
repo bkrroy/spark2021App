@@ -69,19 +69,21 @@ class _AnnouncementScreenState extends State<AnnouncementScreen> {
                         'Announcements',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600,
-                          fontSize: 30.0,
+                          fontSize: 35.0,
                           color: kLightBlueColor,
                         ),
                       ),
                     ),
+                    SizedBox(height: 40,),
                     Container(
                       padding: EdgeInsets.all(10.0),
                       width: screenWidth * 0.7,
                       height: screenHeight * 0.3,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          color: kLightBlueColor),
-                      child: Text(
+                          borderRadius: BorderRadius.circular(15.0),
+                          color: kTrackCardColor),
+                      child: Center(
+                        child:Text(
                         text,
                         style: GoogleFonts.poppins(
                           fontSize: 18.0,
@@ -89,6 +91,7 @@ class _AnnouncementScreenState extends State<AnnouncementScreen> {
                           fontWeight: FontWeight.w400,
                         ),
                         textAlign: TextAlign.center,
+                      ),
                       ),
                     ),
                   ],

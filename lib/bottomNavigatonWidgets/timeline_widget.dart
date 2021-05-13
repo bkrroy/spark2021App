@@ -14,8 +14,8 @@ class TimeLineWidget extends StatelessWidget {
     '10:30 am',
     '1:00 pm',
     '4:00 pm',
-    '9:00 pm',
     '7:00 pm',
+    '9:00 pm',
     '11:30 pm',
   ];
 
@@ -23,32 +23,32 @@ class TimeLineWidget extends StatelessWidget {
     'Inaugural Ceremony',
     'Hack Begins',
     'Technical Session 1',
-    'Review 1',
     'Technical Session 2',
-    'Recreational Activities',
+    'Review 1',
+    'Fun Activities',
   ];
 
   final List<String> secondDayTimeList = [
-    '11:00 am',
     '1:00 pm',
-    '3:30 pm',
-    '7:00 pm',
+    '03:30 pm',
+    '07:00 pm',
   ];
 
   final List<String> secondDayInfo = [
-    'Technical Session 3',
     'Review 2',
-    'Recreational Activities',
-    'Technical Session 4',
+    'Fun Activities',
+    'Technical Session 3',
   ];
 
   final List<String> thirdDayTimeList = [
     '1:00 pm',
+    '1:30 pm',
     '6:00 pm',
   ];
 
   final List<String> thirdDayInfo = [
     'Final Submission',
+    'Final Presentation',
     'Closing Ceremony',
   ];
 

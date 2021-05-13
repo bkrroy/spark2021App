@@ -61,6 +61,7 @@ class AboutISAVITPage extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
+
                           ),
                         ),
                       ),
@@ -68,9 +69,12 @@ class AboutISAVITPage extends StatelessWidget {
                   ],
                 ),
               ),
+
             ],
+
           ),
         ),
+
       ),
     );
   }

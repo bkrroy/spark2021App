@@ -130,28 +130,28 @@ class _SignInState extends State<SignIn> {
                                     .signIn(email: email, password: password);
                               },
                             ),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.08,
-                            ),
-                            OrWidgetDisplay(),
-                            SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.03,
-                            ),
-                            Center(
-                              child: Text('Sign in with'),
-                            ),
-                            SizedBox(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.018,
-                            ),
-                            GestureDetector(
-                              onTap: (){
-                                final provider =
-                                    Provider.of<GoogleSignInProvider>(context, listen: false);
-                                provider.login();
-                              },
-                              child: GoogleOrAppleSignIn(),
-                            ),
+                            // SizedBox(
+                            //   height: MediaQuery.of(context).size.height * 0.08,
+                            // ),
+                            //OrWidgetDisplay(),
+                            // SizedBox(
+                            //   height: MediaQuery.of(context).size.height * 0.03,
+                            // ),
+                            // Center(
+                            //   child: Text('Sign in with'),
+                            // ),
+                            // SizedBox(
+                            //   height:
+                            //       MediaQuery.of(context).size.height * 0.018,
+                            // ),
+                            // GestureDetector(
+                            //   onTap: (){
+                            //     final provider =
+                            //         Provider.of<GoogleSignInProvider>(context, listen: false);
+                            //     provider.login();
+                            //   },
+                            //   child: GoogleOrAppleSignIn(),
+                            // ),
                             SizedBox(
                               height:
                                   MediaQuery.of(context).size.height * 0.023,
