@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "E:\\Spark App\\spark2021App\\build\\app\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
+            "outputFile": "/Users/somyakhatri/Desktop/MyApps/spark2021App/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\transforms-2\\files-2.1\\b8f01c25dc231b01a59b8e52560187fc\\jetified-play-services-auth-16.0.1\\res\\values-watch-v20\\values.xml",
+                    "source": "/Users/somyakhatri/.gradle/caches/transforms-2/files-2.1/1ff8741b22b8adc6129e504c2d62fd63/jetified-play-services-auth-16.0.1/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

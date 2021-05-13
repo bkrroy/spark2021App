@@ -115,7 +115,7 @@ class _CollaborationWidgetState extends State<CollaborationWidget> {
                     return Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        height: 185,
+                        height: 190,
                         width: 158,
                         child: Stack(
                           children: [
@@ -210,7 +210,7 @@ class SpeakerContainer extends StatelessWidget {
                     height: 10,
                   ),
                   Container(
-                    height: 40,
+                    height: 60,
                     width: 105,
                     child: Column(
                       children: [
@@ -218,16 +218,18 @@ class SpeakerContainer extends StatelessWidget {
                           speakerName,
                           style: GoogleFonts.poppins(
                             fontSize: 12,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             color: Colors.black,
                           ),
+                          textAlign: TextAlign.center,
                         ),
                         AutoSizeText(
                           speakerDesignation,
                           style: GoogleFonts.poppins(
-                            fontSize: 10,
+                            fontSize: 6,
                             color: Colors.black,
                           ),
+                            textAlign: TextAlign.center,
                         ),
                       ],
                     ),

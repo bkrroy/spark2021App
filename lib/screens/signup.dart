@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spark2021app/authentication/buttons/registeredUser.dart';
 import 'package:spark2021app/authentication/buttons/signUp_or_SignInButton.dart';
 import 'package:spark2021app/authentication/buttons/sign_upButton.dart';
 import 'package:spark2021app/authentication/buttons/white_rounded_google_auth.dart';
@@ -34,6 +35,8 @@ class _SignUpState extends State<SignUp> {
     final double screenHeight = MediaQuery.of(context).size.height;
     final double screenWidth = MediaQuery.of(context).size.width;
     final firebaseUser = context.watch<User>();
+
+
 
     if (firebaseUser != null) {
       return HomePage();
@@ -108,18 +111,18 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.08,
-                  ),
-                  OrWidgetDisplay(),
+                  // SizedBox(
+                  //   height: MediaQuery.of(context).size.height * 0.08,
+                  // ),
+                  // OrWidgetDisplay(),
+                  // SizedBox(
+                  //   height: MediaQuery.of(context).size.height * 0.03,
+                  // ),
+                  // GoogleOrAppleSignIn(),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
-                  GoogleOrAppleSignIn(),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
-                  ),
-                  SignInOrSignOutScreenNavigator(
+                  registeredUser(
                     screenName: 'sign in',
                   ),
                 ],

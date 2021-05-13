@@ -17,36 +17,40 @@ class HomeWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             /// This container is for the spark logo
+            // SizedBox(
+            //   height: 42,
+            // ),
             Container(
               width: 178,
               child: Image.asset('images/sparkLogo.png'),
             ),
+            //SizedBox(height: 40,),
 
             /// This container is for the Hey there text
-            Container(
-              width: 209,
-              child: Center(
-                child: RichText(
-                  text: TextSpan(
-                    text: 'Hey ',
-                    style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: Color(0xFF4BD0FB),
-                      fontSize: headingFontSize,
-                    ),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'there!',
-                        style: TextStyle(
-                          fontFamily: 'Poppins',
-                          color: Colors.white,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
+            // Container(
+            //   width: 209,
+            //   child: Center(
+            //     child: RichText(
+            //       text: TextSpan(
+            //         text: 'Hey ',
+            //         style: TextStyle(
+            //           fontFamily: 'Poppins',
+            //           color: Color(0xFF4BD0FB),
+            //           fontSize: headingFontSize,
+            //         ),
+            //         children: <TextSpan>[
+            //           TextSpan(
+            //             text: 'there!',
+            //             style: TextStyle(
+            //               fontFamily: 'Poppins',
+            //               color: Colors.white,
+            //             ),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ),
+            // ),
             GlassDisplayWidget(
               imageLocation: 'images/darkBlueGlass.png',
               text: 'Prizes',
@@ -64,7 +68,7 @@ class HomeWidget extends StatelessWidget {
             ),
             GlassDisplayWidget(
               imageLocation: 'images/lightBlueGlass.png',
-              text: 'Profile',
+              text: 'About ISA-VIT',
               screenName: '/profileScreen',
             ),
           ],
