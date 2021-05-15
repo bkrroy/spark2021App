@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:spark2021app/constant.dart';
 import 'package:spark2021app/states/background_widget.dart';
 
+//REMOVED THIS SCREEN FOR NOW
+
 class AboutISAVITPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

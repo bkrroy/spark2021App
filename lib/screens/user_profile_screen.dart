@@ -12,7 +12,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 
-
+//THIS IS THE ABOUT ISA-VIT Page in the App
 class UserProfileScreen extends StatelessWidget {
 
 
@@ -77,7 +77,7 @@ class UserProfileScreen extends StatelessWidget {
                             style: GoogleFonts.poppins(
                               color: kLightBlueColor,
                               fontWeight: FontWeight.w600,
-                              fontSize: 40,
+                              fontSize: 35,
                             ),
                           ),
                         ),
