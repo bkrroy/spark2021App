@@ -69,7 +69,7 @@ class _AnnouncementScreenState extends State<AnnouncementScreen> {
                         'Announcements',
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w600,
-                          fontSize: 35.0,
+                          fontSize: 30.0,
                           color: kLightBlueColor,
                         ),
                       ),
